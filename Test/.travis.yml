@@ -1,5 +1,5 @@
 before_install:
-  gem install bundler
+  - gem install bundler
 services:
   - postgresql
 addons:
