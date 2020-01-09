@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+// eslint-disable-next-line import/no-unresolved
 import pool from './config';
 
 dotenv.config();
