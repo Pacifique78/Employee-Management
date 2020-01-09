@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import validationHelper from '../Helpers/validationHelper';
 
-export const checkManagerSignUp = (req, res, next) => {
+const checkManagerSignUp = (req, res, next) => {
   const signUpSchema = Joi.object().keys({
     name: Joi.string()
       .trim()
@@ -15,7 +15,6 @@ export const checkManagerSignUp = (req, res, next) => {
     phoneNumber: Joi.string().regex(/^\+2507[2-3]\d{7}?/).required(),
     email: Joi.string().email({ minDomainSegments: 2 }).required(),
     dob: Joi.date().required(),
-    status: Joi.string().required(),
     password: Joi.string().regex(/^[a-zA-Z0-9!@#$%^&*]{3,30}$/).min(8).required(),
   });
   const schemasValidation = Joi.validate(req.body, signUpSchema);
