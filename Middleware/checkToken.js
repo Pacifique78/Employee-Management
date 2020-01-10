@@ -4,7 +4,6 @@ import { querry } from '../Db/index';
 
 dotenv.config();
 export const checkToken = async (req, res, next) => {
-//   const { authorization } = req.headers;
   const authorization = req.headers.authorization || req.params.token;
   if (!authorization) {
     return res.status(401).json({

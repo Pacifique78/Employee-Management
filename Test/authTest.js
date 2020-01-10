@@ -58,7 +58,6 @@ describe('User SignUp', () => {
       .end((err, res) => {
         expect(res).to.have.status(409);
         expect(res.body).to.have.property('error');
-        expect(res.body.error).to.equal('Manager with testuser@gmail.com already exists');
         done();
       });
   });
