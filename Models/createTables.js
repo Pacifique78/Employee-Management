@@ -5,9 +5,9 @@ export const createTables = () => {
     employees(
         id serial,
         name character varying(100) NOT NULL,
-        nationalid character varying(30) NOT NULL,
-        phoneNumber character varying(15) NOT NULL,
-        email character varying(50) NOT NULL,
+        nationalid character varying(30) UNIQUE NOT NULL,
+        phoneNumber character varying(15) UNIQUE NOT NULL,
+        email character varying(50) UNIQUE NOT NULL,
         dob date NOT NULL,
         status character varying(10) NOT NULL,
         position character varying(10) NOT NULL,

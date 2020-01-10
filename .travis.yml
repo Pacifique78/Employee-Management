@@ -9,7 +9,7 @@ cache:
   directories:
     - "node_modules"
 before_script:
-  - psql -c 'create database mydiary;' -U postgres
+  - psql -c 'create database taskforce;' -U postgres
   - npm install
 script:
   - npm run lint
